@@ -18,8 +18,10 @@ from django.urls import path
 from django.conf.urls import url, include
 
 from api.urls import router as api_router
+from csvtool.urls import router as csvtool_router
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(api_router.urls)),
+    url(r'^csvtool/',include(csvtool_router.urls)),
 ]
